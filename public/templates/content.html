@@ -1,0 +1,49 @@
+<!--EDIT SONGS-->
+<div class="editPanel column col-2" ng-show="editing">
+	<div>{{song.artist}}</div> 
+	<div>{{song.title}}</div>
+	<span>{{song.bpm}}</span> 
+	<span>{{song.key}}</span>
+	<span>{{song.year}}</span>
+	<br><br>
+	<div ng-repeat="tag in song.tags" class="tag">{{tag | uppercase}}</div>
+	<br>
+	<a ng-click="editing=false">CLOSE</a>
+	<a ng-click="remove(song._id);editing=false">DELETE</a>
+</div>
+<!--SONG TABLE-->
+<div class="column" ng-class="{
+	'col-12': !filtersOpen && !editing
+ , 'col-11': filtersOpen && !editing
+ , 'col-10': editing && !filtersOpen
+ , 'col-9': editing && filtersOpen
+	}">
+	<div ng-repeat="key in keys" ng-show="key.active" 
+		class="column grid-{{grids}}">
+		<span class="heading">{{key.name}}</span>
+		<div ng-repeat="song in songs | orderBy:'bpm'| 
+			filter:{key:key.name}:true | range:'bpm':bpmMin:bpmMax | 
+				range:'year':yearMin:yearMax" class="song" ng-click="edit(song)">
+			<span>{{song.bpm}}</span> 
+			<span>{{song.artist}}</span> 
+			<span>{{song.title}}</span> 
+			<span>{{song.year}}</span>
+		</div>
+	</div>
+</div>
+<!--FILTERS-->
+<div class="filters col-1" style="float:right" ng-show="filtersOpen">
+	<span ng-repeat="key in keys" ng-class="{active: key.active}" class="key"
+		   ng-click="toggleKey($index)">
+	  	{{key.name}}
+	</span>
+	<span class="bpm">
+	bpm:
+	<input ng-model="bpmMin"> - <input ng-model="bpmMax">
+	</span>
+	<span class="year">
+	year:
+	<input ng-model="yearMin"> - <input ng-model="yearMax">
+	</span>
+	<div ng-repeat="tag in tags" class="tag">{{tag.name | uppercase}}</div>
+</div>

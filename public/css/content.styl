@@ -1,0 +1,87 @@
+content
+  display block
+  padding 20px
+
+//edit panel
+.editPanel    
+  div:nth-child(2)
+    font-weight bold
+    font-size 1.3em
+    padding-bottom 4px
+
+  span:nth-child(3)
+    font-size 1.3em
+
+  span:nth-child(4)
+    font-size 1.2em
+
+  a
+    margin 13px
+    font-size 0.8em
+    cursor pointer
+
+.editPanel
+  transition all linear 0.3s
+
+.editPanel.ng-hide 
+  opacity 0
+
+
+//song table
+.heading
+  font-weight bold
+  padding-bottom 5px
+  display inline-block
+
+.song
+  cursor pointer
+  overflow hidden
+  span:first-child
+    font-size 0.8em
+    color rgb(100, 255, 90)
+
+  span:nth-child(3)
+    font-weight bold
+    font-size 1.1em
+
+  span:nth-child(4)
+    font-style italic
+    font-size 0.8em
+    color #FFF85A
+
+//filters
+.filters
+  .key
+    padding 12px
+    display inline-block
+    cursor pointer
+    width 26px
+    user-select none
+
+  .key.active
+    font-weight bold
+    font-size 1.3em
+
+  .bpm, .year
+    position relative
+    top -3px
+
+  .bpm input, .year input
+    border none
+    background-color transparent
+    color white
+
+  .bpm input
+    width 23px
+
+  .year input
+    width 28px
+
+  .tag
+    cursor pointer
+  
+.filters
+  transition all linear 0.3s
+
+.filters.ng-hide 
+  opacity 0

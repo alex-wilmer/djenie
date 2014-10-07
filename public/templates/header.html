@@ -1,0 +1,19 @@
+<p class="title" style="float:left">djenie</p>
+<a class="filter" ng-click="filtersOpen = filtersOpen ? false : true">FILTERS</a>
+<a class="newSong" ng-hide="formStep>0" ng-click="next()">NEW SONG</a>
+<form ng-show="formStep>0" ng-submit="next()">
+	<input ng-show="formStep==1" ng-model="newSong.artist" 
+		placeholder="Artist.." on-esc="formStep=0" auto-focus>
+	<input ng-show="formStep==2" ng-model="newSong.title" 
+		placeholder="Title.." on-esc="formStep=1" auto-focus>
+	<input ng-show="formStep==3" ng-model="newSong.bpm" 
+		placeholder="BPM.." on-esc="formStep=2" auto-focus>
+	<input ng-show="formStep==4" ng-model="newSong.key" 
+		placeholder="Key.." on-esc="formStep=3" auto-focus>
+	<input ng-show="formStep==5" ng-model="newSong.year"
+		placeholder="Year.." on-esc="formStep=4" auto-focus>
+	<input ng-show="formStep==6" ng-model="tag" 
+		placeholder="Add a tag.." on-esc="formStep=5" auto-focus>
+	<button ng-show=''></button>
+</form>
+<a class="save" ng-show="formStep==6" ng-click="save()">SAVE</a>

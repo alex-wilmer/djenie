@@ -1,0 +1,319 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  background-color: #0a0013;
+  font-family: 'Helvetica';
+  color: #fff;
+}
+.column {
+  float: left;
+}
+.grid-1 {
+  width: 100%;
+}
+.grid-2 {
+  width: 50%;
+}
+.grid-3 {
+  width: 33.33%;
+}
+.grid-4 {
+  width: 25%;
+}
+.grid-5 {
+  width: 20%;
+}
+.grid-6 {
+  width: 16.66%;
+}
+.grid-7 {
+  width: 14.28%;
+}
+.grid-8 {
+  width: 12.5%;
+}
+.grid-9 {
+  width: 11.11%;
+}
+.grid-10 {
+  width: 10%;
+}
+.grid-11 {
+  width: 9.09%;
+}
+.grid-12 {
+  width: 8.15%;
+}
+.col-1 {
+  width: 8.32%;
+}
+.col-2 {
+  width: 16.65%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.32%;
+}
+.col-5 {
+  width: 41.65%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.32%;
+}
+.col-8 {
+  width: 66.65%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.32%;
+}
+.col-11 {
+  width: 91.65%;
+}
+.col-12 {
+  width: 100%;
+}
+header {
+  background-color: rgba(0,255,100,0.6);
+  height: 40px;
+}
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header .title {
+  font-size: 1.3em;
+  margin: 9px 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+header .filter {
+  float: right;
+  margin: 13px 18px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+header .newSong {
+  float: right;
+  margin: 13px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+header form {
+  float: right;
+  margin: 10px;
+}
+header input {
+  background-color: rgba(0,0,0,0.1);
+  color: #fff;
+  border: 1px solid;
+  padding: 5px;
+  margin-top: -5px;
+  width: 168px;
+}
+header .save {
+  float: right;
+  margin: 13px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+content {
+  display: block;
+  padding: 20px;
+}
+.editPanel div:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-bottom: 4px;
+}
+.editPanel span:nth-child(3) {
+  font-size: 1.3em;
+}
+.editPanel span:nth-child(4) {
+  font-size: 1.2em;
+}
+.editPanel a {
+  margin: 13px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.editPanel {
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.editPanel.ng-hide {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.heading {
+  font-weight: bold;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.song {
+  cursor: pointer;
+  overflow: hidden;
+}
+.song span:first-child {
+  font-size: 0.8em;
+  color: #64ff5a;
+}
+.song span:nth-child(3) {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.song span:nth-child(4) {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #fff85a;
+}
+.filters .key {
+  padding: 12px;
+  display: inline-block;
+  cursor: pointer;
+  width: 26px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.filters .key.active {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.filters .bpm,
+.filters .year {
+  position: relative;
+  top: -3px;
+}
+.filters .bpm input,
+.filters .year input {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+.filters .bpm input {
+  width: 23px;
+}
+.filters .year input {
+  width: 28px;
+}
+.filters .tag {
+  cursor: pointer;
+}
+.filters {
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.filters.ng-hide {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
