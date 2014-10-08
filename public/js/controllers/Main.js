@@ -31,14 +31,23 @@ function Main ($scope, $http) {
 		$scope.tags = data
 	})
 
+	$scope.validated = true
 	$scope.next = function() {
 		if ($scope.formStep == 0) $scope.newSong = {tags: []}
-
+		if ($scope.formStep == 3 && isNaN(parseInt($scope.newSong.bpm))) {
+			$scope.validated = false
+			$scope.bpmWrong = true
+			$scope.newSong.bpm = ''
+		} else {
+			$scope.bpmWrong = false
+		}
 		if ($scope.formStep == 6) {
 			$scope.newSong.tags.push($scope.tag)
 			$scope.tag = ''
 		}
-		$scope.formStep = $scope.formStep < 6 ? $scope.formStep + 1 : 6
+		if ($scope.validated)
+			$scope.formStep = $scope.formStep < 6 ? $scope.formStep + 1 : 6
+		$scope.validated = true
 	}
 
 	$scope.save = function() {
@@ -54,8 +63,7 @@ function Main ($scope, $http) {
 		for (var i=0;i<newSong.tags.length;i++) {
 			var exists = false
 			for (var j=0;j<$scope.tags.length;j++) {
-				if (newSong.tags[i] === $scope.tags[j].name)
-					exists = true
+				if (newSong.tags[i] === $scope.tags[j].name) exists = true
 			}
 			if (!exists) {
 				var newTag = { name: newSong.tags[i] }

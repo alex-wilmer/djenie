@@ -6,8 +6,9 @@
 		placeholder="Artist.." on-esc="formStep=0" auto-focus>
 	<input ng-show="formStep==2" ng-model="newSong.title" 
 		placeholder="Title.." on-esc="formStep=1" auto-focus>
+	<span ng-show="bpmWrong">Enter a valid number!</span>
 	<input ng-show="formStep==3" ng-model="newSong.bpm" 
-		placeholder="BPM.." on-esc="formStep=2" auto-focus>
+		placeholder="BPM.." on-esc="formStep=2;validated=true;newSong.bpm=''" auto-focus>
 	<input ng-show="formStep==4" ng-model="newSong.key" 
 		placeholder="Key.." on-esc="formStep=3" auto-focus>
 	<input ng-show="formStep==5" ng-model="newSong.year"

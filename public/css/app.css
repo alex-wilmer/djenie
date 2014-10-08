@@ -237,18 +237,6 @@ content {
   font-size: 0.8em;
   cursor: pointer;
 }
-.editPanel {
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  transition: all linear 0.3s;
-}
-.editPanel.ng-hide {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
 .heading {
   font-weight: bold;
   padding-bottom: 5px;
@@ -304,16 +292,4 @@ content {
 }
 .filters .tag {
   cursor: pointer;
-}
-.filters {
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  transition: all linear 0.3s;
-}
-.filters.ng-hide {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
 }
