@@ -9,8 +9,10 @@
 	<span ng-show="bpmWrong">Enter a valid number!</span>
 	<input ng-show="formStep==3" ng-model="newSong.bpm" 
 		placeholder="BPM.." on-esc="formStep=2;validated=true;newSong.bpm=''" auto-focus>
+	<span ng-show="keyWrong">Enter a valid key!</span>
 	<input ng-show="formStep==4" ng-model="newSong.key" 
 		placeholder="Key.." on-esc="formStep=3" auto-focus>
+	<span ng-show="yearWrong">Enter a valid year!</span>
 	<input ng-show="formStep==5" ng-model="newSong.year"
 		placeholder="Year.." on-esc="formStep=4" auto-focus>
 	<input ng-show="formStep==6" ng-model="tag" 

@@ -41,6 +41,20 @@ function Main ($scope, $http) {
 		} else {
 			$scope.bpmWrong = false
 		}
+		if ($scope.formStep == 4 && $scope.newSong.key.length > 2) {
+				$scope.validated = false 
+				$scope.keyWrong = true
+				$scope.newSong.key = ''
+		} else {
+			$scope.keyWrong = false
+		}
+		if ($scope.formStep == 5 && isNaN(parseInt($scope.newSong.year))) {
+			$scope.validated = false
+			$scope.yearWrong = true
+			$scope.newSong.year = ''
+		} else {
+			$scope.yearWrong = false
+		}
 		if ($scope.formStep == 6) {
 			$scope.newSong.tags.push($scope.tag)
 			$scope.tag = ''
