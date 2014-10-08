@@ -34,6 +34,18 @@ function Main ($scope, $http) {
 	$scope.validated = true
 	$scope.next = function() {
 		if ($scope.formStep == 0) $scope.newSong = {tags: []}
+		if ($scope.formStep == 1 && $scope.newSong.artist == undefined) {
+			$scope.validated = false
+			$scope.artistWrong = true
+		} else {
+			$scope.artistWrong = false
+		}
+		if ($scope.formStep == 2 && $scope.newSong.title == undefined) {
+			$scope.validated = false
+			$scope.titleWrong = true
+		} else {
+			$scope.titleWrong = false
+		}
 		if ($scope.formStep == 3 && isNaN(parseInt($scope.newSong.bpm))) {
 			$scope.validated = false
 			$scope.bpmWrong = true

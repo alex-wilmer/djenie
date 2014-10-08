@@ -2,8 +2,10 @@
 <a class="filter" ng-click="filtersOpen = filtersOpen ? false : true">FILTERS</a>
 <a class="newSong" ng-hide="formStep>0" ng-click="next()">NEW SONG</a>
 <form ng-show="formStep>0" ng-submit="next()">
+	<span ng-show="artistWrong">Enter a valid artist!</span>
 	<input ng-show="formStep==1" ng-model="newSong.artist" 
 		placeholder="Artist.." on-esc="formStep=0" auto-focus>
+	<span ng-show="titleWrong">Enter a valid title!</span>
 	<input ng-show="formStep==2" ng-model="newSong.title" 
 		placeholder="Title.." on-esc="formStep=1" auto-focus>
 	<span ng-show="bpmWrong">Enter a valid number!</span>
